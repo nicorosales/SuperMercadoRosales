@@ -331,6 +331,35 @@ footer{
    text-align: center;
 }
 
+.categorias-items{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px;
+    justify-content: center;
+
+}
+.card{
+    margin: 15px;
+    text-align: center;
+    line-height: 75px;
+    border: 2px solid black;
+}
+.card-body{
+    align-items: center;
+}
+.card-img-top{
+    height: 280px;
+    width: 50px;
+}
+.btn.btn-primary{
+    color:black;
+    background-color: #ffae6a;
+    border: #d2623f;
+    
+    
+
+}
+
 
     
 
