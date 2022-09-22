@@ -1,0 +1,26 @@
+.header{
+    justify-content: space-between;
+    height: 100px;
+    .logo{
+        display: flex;
+        img{
+            height: 100px;
+            h2{
+                color: black;
+                font-size: 1cm;
+                .nombre-empresa{
+                    animation-name: mover;
+                    animation-duration:1s ;
+                
+   
+                
+                    
+                    
+                }
+                
+            }
+            
+        }
+    }
+    
+}

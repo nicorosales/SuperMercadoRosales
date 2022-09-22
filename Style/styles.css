@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:wght@100;300;400;500;600&display=swap");
+.header {
+  justify-content: space-between;
+  height: 100px;
+}
+.header .logo {
+  display: flex;
+}
+.header .logo img {
+  height: 100px;
+}
+.header .logo img h2 {
+  color: black;
+  font-size: 1cm;
+}
+.header .logo img h2 .nombre-empresa {
+  -webkit-animation-name: mover;
+          animation-name: mover;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+
+
+.navegar .menu-icono img {
+  width: 50px;
+  height: 50px;
+  border-radius: 2px;
+}
+.navegar .menu-icono img #check {
+  display: none;
+}
+.navegar .menu-icono ul {
+  display: flex;
+  align-items: center;
+}
+.navegar .menu-icono ul li {
+  margin-right: 1rem;
+}
+.navegar .menu-icono ul li a {
+  color: #fff;
+}
+@-webkit-keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(100%);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 768px) {
+  .navegar #carrito {
+    display: none;
+  }
+  .navegar #login {
+    position: fixed;
+    left: 80%;
+    top: 0.7rem;
+    background: none;
+  }
+  .navegar .checkbtn {
+    display: block;
+  }
+  .navegar .menu-icono {
+    display: block;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    position: fixed;
+    left: 70%;
+  }
+  .navegar .navegar ul {
+    display: block;
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    background: #d2623f;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+  }
+  .navegar .navegar ul li {
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+  .navegar .navegar ul li:last-child {
+    background: none;
+    padding: 1rem;
+  }
+  .navegar #check:checked ~ ul {
+    left: 0;
+  }
+}
+.navegar .navegar {
+  list-style: none;
+  padding: 0;
+  width: 90%;
+  max-width: 1000px;
+  margin: auto;
+}
+.navegar .navegar li {
+  display: inline-block;
+  text-align: center;
+}
+.navegar .navegar li a {
+  text-decoration: none;
+  color: black;
+  padding: 20px;
+  display: block;
+}
+.navegar .navegar li a:hover {
+  background: #ffae6a;
+}
+.navegar .iconos #login {
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  color: black;
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  background: none;
+}
+.navegar .iconos #login #carrito {
+  width: 4.5rem;
+  height: 4.5rem;
+  line-height: 4.5rem;
+  color: var(--black);
+  font-size: 2rem;
+  text-align: center;
+  cursor: pointer;
+  background-color: #fff;
+}
+.navegar .registro {
+  width: 400px;
+  background-color: #ffae6a;
+  padding: 50px;
+  margin: auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+.navegar .registro h4 {
+  font-size: 22px;
+  text-align: center;
+  padding: 14px;
+  margin-bottom: 20px;
+}
+.navegar .registro h4 .controls {
+  width: 100%;
+  background: #fbf2eb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #d2623f;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+}
+.navegar .registro h4 .controls p {
+  height: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+.navegar .registro h4 .controls p a:hover {
+  color: white;
+  text-decoration: underline;
+}
+.navegar .registro h4 .controls p a:hover .boton {
+  width: 100px;
+  background: coral;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  text-align: right;
+  cursor: pointer;
+}
+.navegar footer {
+  width: 100%;
+  position: absolute;
+  padding: 2rem 8%;
+  background-color: black;
+  display: inline;
+  padding-right: 0.5em;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fbf2eb;
+}
+.navegar footer .footer-menu-coteiner {
+  list-style-type: none;
+  color: #f2f2f2;
+  font-size: 18px;
+}
+.navegar footer .footer-menu-coteiner .social-icons-conteiner, .navegar footer .footer-menu-coteiner .footer-menu-coteiner {
+  display: inline;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+.navegar footer .footer-menu-coteiner .social-icons-conteiner .social-icon, .navegar footer .footer-menu-coteiner .footer-menu-coteiner .social-icon {
+  height: 50px;
+  width: 50px;
+  margin: 1rem;
+  color: #fbf2eb;
+  background-color: #121212;
+}
+.navegar footer .footer-menu-coteiner .social-icons-conteiner .social-icon:hover, .navegar footer .footer-menu-coteiner .footer-menu-coteiner .social-icon:hover {
+  background-color: #121212;
+  filter: invert(1);
+}
+
+.menu-item {
+  margin: 1px 15px;
+  cursor: pointer;
+  opacity: 0.6;
+  display: inline;
+}
+
+.menu-item:hover {
+  opacity: 1;
+}
+
+.copyright {
+  color: #f2f2f2;
+  opacity: 0.3rem;
+  text-align: center;
+}
+
+.contenedor .form .form-header .form-title {
+  font-weight: normal;
+  padding: 14px 0;
+}
+
+.contenedor .form {
+  background: #ffae6a;
+  width: 90%;
+  max-width: 650px;
+  margin: auto;
+  padding: 5px 35px;
+  margin-top: 30px;
+  padding-bottom: 30px;
+  border-radius: 3px;
+}
+
+.contenedor .form .form-label {
+  display: block;
+  font-size: 16px;
+}
+
+.contenedor .form .form-input, .form-textarea {
+  width: 100%;
+  background: #fbf2eb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #d2623f;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+}
+
+.contenedor .form .form-textarea {
+  resize: vertical;
+  max-height: 150px;
+  min-height: 50px;
+}
+
+.contenedor .boton {
+  width: 200px;
+  background: coral;
+  border: none;
+  padding: 12px;
+  color: white;
+  margin: 16px 0;
+  font-size: 16px;
+  text-align: right;
+  cursor: pointer;
+  text-align: center;
+}
+
+.video-explica {
+  padding-left: 50px;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.categorias-items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: center;
+}
+
+.card {
+  margin: 15px;
+  text-align: center;
+  line-height: 75px;
+  border: 6px solid black;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  transform: translateY(-3%);
+}
+
+.card-body {
+  align-items: center;
+}
+
+.card-img-top {
+  height: 280px;
+  width: 50px;
+}
+
+.btn.btn-primary {
+  color: black;
+  background-color: #ffae6a;
+  border: #d2623f;
+}/*# sourceMappingURL=styles.css.map */
