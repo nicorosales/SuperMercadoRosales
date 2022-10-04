@@ -1,4 +1,3 @@
-@import "./partials/header";
 
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&family=Poppins:wght@100;300;400;500;600&display=swap');
 *{
@@ -11,64 +10,73 @@
     transition: all .2s linear;
     
 }
-.header{
+.header {
+    display:flex;
     justify-content: space-between;
     height: 100px;
     .logo{
         display: flex;
+        .nombre-empresa{
+            animation-name: mover;
+            animation-duration:1s ; 
+        }
+        h2{
+            color: black;
+            font-size: 1cm;
+        }
+        
         img{
             height: 100px;
-            h2{
-                color: black;
-                font-size: 1cm;
-                .nombre-empresa{
-                    animation-name: mover;
-                    animation-duration:1s ;
-                
-   
-                
-                    
-                    
-                }
-                
-            }
-            
         }
     }
-    
 }
+.navegar{
 
-.navegar {
+    list-style: none;
+    padding: 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    li{
+        display: inline-block;
+        text-align: center;
+        margin-right: 1rem;
+        a{
+            text-decoration: none;
+            color: black;
+            padding: 20px;
+            display: block;
+            &:hover{
+                background: #ffae6a;
+            }
+        }
         
+    }
+    .checkbtn{
+        display: block;
+    }
+    .menu-icono{
+        display: none;
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 2px;
+
+        }
         ul{
             display: flex;
             align-items: center;
-            li{
-                margin-right: 1rem;
-                a{
-                    color: #fff;
-                
-                }
-            }
-        }
-    
-    }
-    
-
-.menu-icono {
-        img{
-            width: 50px;
-        height: 50px;
-        border-radius: 2px;
-        #check{
-            display: none;
-        
-        }
 
         }
     }
 
 
+}
+#check{
+    display: none;
+}
+
+    
 
 
 @keyframes mover {
@@ -94,9 +102,7 @@
         
 
     }
-    .checkbtn{
-        display: block;
-    }
+    
     .menu-icono{
         display: block;
         top: 20px;
@@ -132,32 +138,7 @@
     }
 }
 
-
-/* Aca iba lo copia*/
-
-.navegar {
-    list-style: none;
-    padding: 0;
-    width: 90%;
-    max-width: 1000px;
-    margin: auto;
-    li{display: inline-block;
-        text-align: center;
-        a {
-        text-decoration: none;
-        color: black;
-        padding: 20px;
-        display: block;
-        &:hover{
-            background: #ffae6a;
-
-        }
-    }
-  }
-    
-}
 .iconos{
-    
     #login{
         width: 4.5rem;
         height: 4.5rem;
@@ -167,19 +148,21 @@
         text-align: center;
         cursor: pointer;
         background: none;
-        #carrito{
-            width: 4.5rem;
-            height: 4.5rem;
-            line-height: 4.5rem;
-            color: var(--black);
-            font-size: 2rem;
-            text-align: center;
-            cursor: pointer;
-            background-color: #fff;    
-        }
         
     }
+    #carrito{
+        width: 4.5rem;
+        height: 4.5rem;
+        line-height: 4.5rem;
+        color: var(--black);
+        font-size: 2rem;
+        text-align: center;
+        cursor: pointer;
+        background-color: #fff;    
 }
+
+}
+
 
 
 
@@ -196,48 +179,37 @@
         text-align: center;
         padding: 14px;
         margin-bottom: 20px;
-        .controls{
-            width: 100%;
-            background: #fbf2eb;
-            padding: 10px;
-            border-radius: 4px;
-            margin-bottom: 16px;
-            border: 1px solid #d2623f;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size: 18px;
-            p{ height: 40px;
-                text-align: center;
-                font-size: 18px;
-                a{ 
-                    &:hover{
-                        color: white;
-                        text-decoration: underline;
-                        .boton {
-                            width: 100px;
-                            background: coral;
-                            border: none;
-                            padding: 12px;
-                            color: white;
-                            margin: 16px 0;
-                            font-size: 16px;
-                            text-align: right;
-                            cursor: pointer;
-                        
-                        }
-                    }
-                }
-            
-            }
-
-        }
- 
+    }
+    .controls{
+        width: 100%;
+        background: #fbf2eb;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #d2623f;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        
     }
     
+    p{
+        height: 40px;
+        text-align: center;
+        font-size: 18px;
+        a{
+            &:hover{
+            color: white;
+            text-decoration: underline;
+            }
+        }
+        
     
+    }
+    .boton {
+        @include boton
+    
+    }
 }
- 
-
-
 
 
 footer{
@@ -252,36 +224,27 @@ footer{
     flex-direction: column;
     color: #fbf2eb;
     .social-icons-conteiner, .footer-menu-coteiner{
-        
         display: inline;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
         margin-bottom: 1rem;
-        .social-icon{
-            height: 50px;
-            width: 50px;
-            margin: 1rem;
-            color: #fbf2eb;
+        list-style-type:none;
+        color:#f2f2f2 ;
+        font-size: 18px;
+    }
+    .social-icon{
+        height: 50px;
+        width: 50px;
+        margin: 1rem;
+        color: #fbf2eb;
+        background-color: #121212;
+        &:hover{
             background-color: #121212;
-            &:hover{
-                background-color: #121212;
-                filter: invert(1);
-            
-            }
-            
+            filter: invert(1);
         
         }
-
     }
-}
-
-
-
-.footer-menu-coteiner{
-    list-style-type:none;
-    color:#f2f2f2 ;
-    font-size: 18px;
     .menu-item{
         margin: 1px 15px;
         cursor:pointer;
@@ -289,24 +252,36 @@ footer{
         display: inline;
         &:hover{
             opacity: 1;
+        }
+
         
     }
+    .copyright{
+        color: #f2f2f2;
+        opacity: 0.3rem;
+        text-align: center;
+    }
+    .site-map{
+        display: flex;
+        flex-direction: column;
+        color: #ffae6a;
+        text-decoration: none;
+        .titulo-site{
+            color: white;
+        }
 
-}
-
-}
-.copyright{
+    }
     
-    color: #f2f2f2;
-    opacity: 0.3rem;
-    text-align: center;
-
 
 }
 
 
-.contenedor{
-    .form {
+.contenedor .form .form-header .form-title{
+    font-weight: normal;
+    padding: 14px 0;
+}
+.contenedor {
+        .form{
         background: #ffae6a;
         width: 90%;
         max-width: 650px;
@@ -315,55 +290,27 @@ footer{
         margin-top: 30px;
         padding-bottom: 30px;
         border-radius: 3px;
-        .form-header .form-title{
-            font-weight: normal;
-            padding: 14px 0;
-            .contenedor .form .form-label{
-                display: block;
-                font-size: 16px;
-                .contenedor .form .form-input, .form-textarea{
-                    width: 100%;
-                    background: #fbf2eb;
-                    padding: 10px;
-                    border-radius: 4px;
-                    margin-bottom: 16px;
-                    border: 1px solid #d2623f;
-                    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-                    font-size: 18px;
-                    .contenedor .form  .form-textarea{
-                        resize: vertical;
-                        max-height: 150px;
-                        min-height: 50px;
-                        .contenedor .boton{
-                            width: 200px;
-                            background: coral;
-                            border: none;
-                            padding: 12px;
-                            color: white;
-                            margin: 16px 0;
-                            font-size: 16px;
-                            text-align: right;
-                            cursor: pointer;
-                            text-align: center;
-                        }
-
-                    }
-
-                
-                }
-                
-            }
-
-    
+        .form-input, .form-textarea{
+        width: 100%;
+        background: #fbf2eb;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #d2623f;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        resize: vertical;
+        max-height: 150px;
+        min-height: 50px;
+        }
+    }
+    .boton{
+        @include boton
     }
 
-}
     
-
-
-
-
-
+    
+}
 
 .video-explica{
    padding-left: 50px;
@@ -376,38 +323,47 @@ footer{
     flex-wrap: wrap;
     padding: 40px;
     justify-content: center;
-
     .card{
         margin: 15px;
         text-align: center;
         line-height: 75px;
-        border: 6px solid black;
+        border: 6px;
         overflow:hidden ;
         background: #fff;
         box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
         cursor: pointer;
         transition: all 400ms ease;
-
         &:hover{
             box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
             transform: translateY(-3%);
-            .card-body{
-                align-items: center;
-                .card-img-top{
-                    height: 280px;
-                    width: 50px;
-                    .btn.btn-primary{
-                        color:black;
-                        background-color: #ffae6a;
-                        border: #d2623f;
-                        
-                        
-                    
-                    }
-                }
-            }
+    
         }
+         
+    
+    }
+}
+
+.card-img-top{
+    height: 280px;
+    width: 50px;
+}
+.card-body{
+    align-items: center;
+    .btn.btn-primary{
+        color:black;
+        background-color: #ffae6a;
+        border: #d2623f;
+        
+        
     
     }
 
 }
+
+
+
+
+
+
+    
+
